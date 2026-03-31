@@ -33,14 +33,14 @@ export namespace ConfigPaths {
         : []),
       ...(await Array.fromAsync(
         Filesystem.up({
-          targets: [".opencode"],
-          start: Global.Path.home,
-          stop: Global.Path.home,
+          targets: [".thor.opencode"],
+          start: directory,
+          stop: worktree,
         }),
       )),
       ...(await Array.fromAsync(
         Filesystem.up({
-          targets: [".thor.opencode"],
+          targets: [".opencode"],
           start: Global.Path.home,
           stop: Global.Path.home,
         }),
