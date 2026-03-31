@@ -15,6 +15,7 @@ const FILES = [
   "AGENTS.md",
   ...(Flag.OPENCODE_DISABLE_CLAUDE_CODE_PROMPT ? [] : ["CLAUDE.md"]),
   "CONTEXT.md", // deprecated
+  "THOR.md",
 ]
 
 function globalFiles() {

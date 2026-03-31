@@ -38,6 +38,13 @@ export namespace ConfigPaths {
           stop: Global.Path.home,
         }),
       )),
+      ...(await Array.fromAsync(
+        Filesystem.up({
+          targets: [".thor.opencode"],
+          start: Global.Path.home,
+          stop: Global.Path.home,
+        }),
+      )),
       ...(Flag.OPENCODE_CONFIG_DIR ? [Flag.OPENCODE_CONFIG_DIR] : []),
     ]
   }
